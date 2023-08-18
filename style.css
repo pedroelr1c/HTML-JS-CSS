@@ -1,0 +1,31 @@
+button{
+
+    width: 9em;/* Define a larfura */
+    height: 3em;/* Define a altura */
+    border-radius: 30em;/* Cria uma raio arredondado na borda */
+    font-size: 15px;/* Define a fonte em 15 pixels */
+    border: none;/* Retira a borda */
+    position: relative;/* O posicionamento do elemento se torna relativo */
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+
+}
+
+button::before{
+    content: '';
+    width: 0em;
+    height: 3em;
+    border-radius: 30em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, #0fd850 0%, #f9f047 100%);
+    transition: .5s ease;
+    display: block;
+    z-index: -1;
+}
+
+button:hover::before{
+    width: 9em;
+}
